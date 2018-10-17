@@ -1,0 +1,51 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Page information with Users data",
+    "description": "Page information and List of user data",
+    "type": "object",
+    "properties": {
+	    "page": {
+            "description": "Current Page number",
+            "type": "integer"
+        },
+	    "per_page": {
+            "description": "number of user details per page",
+            "type": "integer"
+        },
+	    "total": {
+            "description": "Total number of user details",
+            "type": "integer"
+        },
+	    "total_pages": {
+            "description": "Total number of pages",
+            "type": "integer"
+        },
+        "data": {
+	    	"description": "array of user data",
+            "type": "array",
+            "items": {
+			    "type": "object",
+			    "properties": {
+		            "id": {
+			            "description": "Unique id for each user",
+			            "type": "integer"
+			        },
+		            "first_name": {
+			            "description": "First name of user",
+			            "type": "string"
+			        },
+		            "last_name": {
+			            "description": "Last name of user",
+			            "type": "string"
+			        },
+		            "avatar": {
+			            "description": "jjjj",
+			            "type": "string"
+			        }
+		       },
+		       "required": ["id", "first_name", "last_name"]
+	    	}
+    	}
+    },
+    "required": ["page", "per_page", "total", "total_pages"]
+}
