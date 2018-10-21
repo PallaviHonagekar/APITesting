@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="APITesting">
+	<test name="testingMethods">
+		 <groups>
+		 	     <define name = "All">
+			 		<include name="GetRequest" />
+			 		<include name="PostRequest" />
+			 		<include name="DeleteRequest" />
+			 		<include name="PutRequest" />
+			 		<include name="PatchRequest" />
+		 		</define> 
+		    <run>
+				<include name="All" /> 
+		    </run>  
+		</groups> 
+		<classes>
+			<class name="test.GetUsers"></class>
+			<class name="test.GetSingleUser"></class>
+			<class name="test.CreateUser"></class>
+			<class name="test.UpdateUser"></class>
+			<class name="test.PartialUpdateUser"></class>
+			<class name="test.DeleteUser"></class>
+		</classes>
+	</test>
+</suite>
